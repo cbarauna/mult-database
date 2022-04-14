@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    datasource:
+      db1:
+        jdbcUrl: jdbc:postgresql://127.0.0.1:5438/mult-test
+        username: postgres
+        password: postgres
+        driver-class-name: org.postgresql.Driver
+        type: com.zaxxer.hikari.HikariDataSourcetrue
+        hikari:
+          connectionTestQuery: SELECT 1 FROM DUAL
+          idleTimeout: 10000
+          maximumPoolSize: 50
+          minimumIdle: 20
+          poolName: ${spring.application.name}-ConnectionPool
+
+      db2:
+        jdbcUrl: jdbc:postgresql://127.0.0.1:5438/mult-test
+        username: postgres
+        password: postgres
+        driver-class-name: oracle.jdbc.OracleDriver
+        type: com.zaxxer.hikari.HikariDataSource
+        hikari:
+          connectionTestQuery: SELECT 1 FROM DUAL
+          idleTimeout: 10000
+          maximumPoolSize: 50
+          minimumIdle: 20
+          poolName: ${spring.application.name}-ConnectionPool
