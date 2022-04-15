@@ -26,3 +26,7 @@ spring:
           maximumPoolSize: 50
           minimumIdle: 20
           poolName: ${spring.application.name}-ConnectionPool
+
+  jpa:
+    hibernate:
+      ddl-auto: create
